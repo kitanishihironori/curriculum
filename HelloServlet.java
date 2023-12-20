@@ -16,8 +16,11 @@ import def.Bean;
  */
 @WebServlet("/HelloServlet")
 public class HelloServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
+	
 	String[][] sikaku = {{"基本情報技術者試験","7500"},{"CCNA","42900"},{"Java Silver","34300"},{"LinuC","16500"}};
+	
 	ArrayList<Bean> beans = new ArrayList<Bean>();
 	
     /**
@@ -45,9 +48,10 @@ public class HelloServlet extends HttpServlet {
         
             
 		request.setAttribute("beans", beans);
-		RequestDispatcher dispatcher = 
-			        request.getRequestDispatcher("/JSPFile.jsp");
-			    dispatcher.forward( request, response ); 
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/JSPFile.jsp");
+			    
+		dispatcher.forward( request, response ); 
 		
 	}
 
@@ -83,8 +87,8 @@ public class HelloServlet extends HttpServlet {
 		
 		request.setAttribute("bean_senntaku",  bean_senntaku);
 		
-		RequestDispatcher dispatcher = 
-			        request.getRequestDispatcher("/JSP_postFile.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP_postFile.jsp");
+		
 			    dispatcher.forward( request, response ); 
 		
 			    
