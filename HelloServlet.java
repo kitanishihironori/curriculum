@@ -80,7 +80,7 @@ public class HelloServlet extends HttpServlet {
 		    bean_senntaku.add(beans.get(number));
 			
 		}
-		request.setAttribute("A", "A");
+		
 		request.setAttribute("bean_senntaku",  bean_senntaku);
 		
 		RequestDispatcher dispatcher = 
